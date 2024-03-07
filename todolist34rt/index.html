@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es" data-lt-installed="true">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tareas</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tareas</h1>
+    </header>
+    <main>
+      <div id="theme"></div>
+      <form name="formTodo">
+        <fieldset>
+          <legend>Crea</legend>
+          <label for="newTask"> Nueva tarea </label>
+          <input
+            type="text"
+            name="newTask"
+            id="newTask"
+            placeholder="Nueva tarea"
+            required=""
+          />
+          <button type="submit" id="add">+</button>
+        </fieldset>
+        <fieldset>
+          <legend>Elimina</legend>
+          <button type="button" id="clear">Limpia tareas hechas</button>
+          <button type="button" id="delete">Borra tareas</button>
+        </fieldset>
+      </form>
+      <p class="error"></p>
+      <ul id="todoList">
+        <li data-counter="1">
+          <input type="checkbox" /><span>Estudiar JS</span>
+        </li>
+        <li data-counter="0">
+          <input type="checkbox" /><span>Hacer la compra</span>
+        </li>
+      </ul>
+      <div class="modal-bg hide">
+        <div class="modal-fg">
+          ¿Estas segur@?
+          <button type="button" id="no">No</button>
+          <button type="button" id="si">Sí</button>
+        </div>
+      </div>
+    </main>
+    <footer>Copyright © 2024 HACKABOSS</footer>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

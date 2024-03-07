@@ -1,0 +1,138 @@
+@import url("./modal.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* custom property empiezan por "--" */
+  --backColorBody: rgb(255, 255, 255);
+  --backColorButton: rgb(0, 127, 255);
+
+  --fontColor: rgb(0, 0, 0);
+  --backColorBodyDark: rgb(32, 35, 41);
+  --fontColorDark: rgb(121, 118, 118);
+}
+
+body.dark {
+  --backColorBody: var(--backColorBodyDark);
+  --fontColor: var(--fontColorDark);
+}
+
+#theme {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+}
+
+body {
+  background-color: var(--backColorBody);
+  color: var(--fontColor);
+}
+
+input {
+  background-color: var(--backColorBody);
+  border-color: var(--fontColor);
+}
+
+div#theme {
+  background-color: var(--backColorButton);
+  background-image: url("../img/moon.svg");
+  border: gray;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+body.dark div#theme {
+  background-image: url("../img/sun.svg");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: none;
+}
+
+main {
+  max-width: 500px;
+  margin: 0 auto;
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+main form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+main form fieldset {
+  border: none;
+}
+
+main form fieldset:first-child {
+  display: flex;
+  gap: 10px;
+}
+
+main form fieldset:first-child input {
+  flex-grow: 1;
+  padding: 0.2rem;
+}
+
+main form fieldset:last-child {
+  border: none;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+main form fieldset legend {
+  display: none;
+}
+
+main form label {
+  display: none;
+}
+
+button {
+  border: none;
+  color: white;
+  background-color: var(--backColorButton);
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+ul#todoList {
+  margin-top: 1rem;
+  list-style: none;
+}
+
+footer {
+  color: var(--backColorButton);
+  text-align: center;
+  padding: 1rem;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  height: 20px;
+  margin-top: 1rem;
+}
+
+li span {
+  margin-left: 5px;
+}
+
+.done {
+  text-decoration: line-through;
+}
