@@ -7,5 +7,5 @@ Para subir los cambios:
 git status
 git add .
 git status
-git commit m "descripcion del commit"
+git commit -m "descripcion del commit"
 git push
